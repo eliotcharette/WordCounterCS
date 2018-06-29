@@ -6,37 +6,50 @@ namespace WordCounterName
   public class WordCounterScore
   {
     public int numberOfTimes = 0;
-    //private string _input;
 
-    // public WordCounterScore()
-    // {
-    //
-    // }
+    public WordCounterScore()
+    {
+
+    }
     public void Run()
     {
       Console.WriteLine("Enter a word and I will tell you how many times it occurs in your sentence: ");
       string userWord = Console.ReadLine();
       userWord = userWord.ToLower();
-    }
-    public int FindWord(string userWord)
-    {
-      //foreach(string inputWord in userWord)
-      //{
+      // string[] words = userWord.Split(new string[]{" "}, StringSplitOptions.RemoveEmptyEntries);
+
+      // foreach(userWord in words)
+      // {
+      }
+      public int FindWord(string userWord)
+      {
         if(userWord == "hello")
         {
           numberOfTimes++;
-          return numberOfTimes;
+          Console.WriteLine(numberOfTimes);
         }
         else
         {
-          return 0;
+          Console.WriteLine(10);
         }
-      //}
-    }
-    public int GetScore()
-    {
-      return numberOfTimes;
-    }
+      }
+    // }
+    // public int FindWord(string userWord)
+    // {
+    //     if(userWord == "hello")
+    //     {
+    //       numberOfTimes++;
+    //       return numberOfTimes;
+    //     }
+    //     else
+    //     {
+    //       return 10;
+    //     }
+    // }
+    // public int GetScore()
+    // {
+    //   return numberOfTimes;
+    // }
   }
   public class Program
   {
@@ -44,6 +57,8 @@ namespace WordCounterName
     {
       WordCounterScore newWord = new WordCounterScore();
       newWord.Run();
+
+
     }
   }
 }
