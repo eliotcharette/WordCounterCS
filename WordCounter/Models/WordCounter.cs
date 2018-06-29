@@ -11,7 +11,7 @@ namespace WordCounterName
     {
 
     }
-    
+
   }
   public class Program
   {
@@ -20,7 +20,7 @@ namespace WordCounterName
       //WordCounterScore newWord = new WordCounterScore();
       int numberOfTimes = 0;
 
-      Console.WriteLine("Enter a word");
+      Console.WriteLine("Enter a word: ");
       string userWord = Console.ReadLine();
       userWord = userWord.ToLower();
       Console.WriteLine("Your word is: " + userWord);
@@ -36,7 +36,7 @@ namespace WordCounterName
       {
         numberOfTimes++;
       }
-      Console.WriteLine(numberOfTimes);
+      Console.WriteLine("The word you entered occurs " + numberOfTimes + " times.");
     }
   }
 }
