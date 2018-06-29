@@ -5,13 +5,15 @@ namespace WordCounterName
 {
   public class WordCounterScore
   {
-    public int numberOfTimes = 0;
 
     public WordCounterScore()
     {
 
     }
+    public void FindWord()
+    {
 
+    }
   }
   public class Program
   {
