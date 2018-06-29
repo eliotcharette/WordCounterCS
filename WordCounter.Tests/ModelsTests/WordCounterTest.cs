@@ -8,23 +8,23 @@ namespace WordCounterName.Tests
   [TestClass]
   public class WordCounterTest
   {
-    // [TestMethod]
-    // public void WordCounterScore_FindWordOnce_Equal()
-    // {
-    //   WordCounterScore newWord = new WordCounterScore();
-    //   int result = newWord.FindWord("hello");
-    //   int score = newWord.GetScore();
-    //   Assert.AreEqual(score, 0);
-    // }
     [TestMethod]
-    public void Matching_ReturnInput_String()
+    public void WordCounterScore_FindWordOnce_Equal()
     {
-      string input = "hello";
-      WordCounterScore newWord = new WordCounterScore(input);
-
-      string result = newWord.Matching();
-
-      Assert.AreEqual(input, result);
+      WordCounterScore newWord = new WordCounterScore();
+      int expectedResult = 1;
+      string test = "hello";
+      Assert.AreEqual(expectedResult, newWord.FindWord(test));
     }
+    // [TestMethod]
+    // public void Matching_ReturnInput_String()
+    // {
+    //   string input = "hello";
+    //   WordCounterScore newWord = new WordCounterScore(input);
+    //
+    //   string result = newWord.Matching();
+    //
+    //   Assert.AreEqual(input, result);
+    // }
   }
 }
