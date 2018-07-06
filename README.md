@@ -1,6 +1,6 @@
 # _Word Counter_
 
-#### _This console app will allow a user to enter a word and search how frequently said word appears in a given string. 06.29.18_
+#### _This webapp will allow a user to enter a word and search how frequently said word appears in a given text. 07.6.18_
 
 #### By _**Eliot Charette**_
 
@@ -16,8 +16,8 @@ Input: hello, bob. hello, bill; Output We found your word "2 times"_
 ## _Setup/Installation Requirements_
 
 * _Clone from GitHub_
-* _Copy and paste from a text editor_
-* _Open Html_
+* _Copy and paste in a text editor_
+* _dotnet run in console_
 
 
 ## Support and contact details
@@ -26,7 +26,7 @@ _For any questions please contact EliotCharette@gmail.com_
 
 ## Technologies Used
 
-_C#, Atom, Mono, Apple Terminal_
+_C#, Atom, .net, Apple Terminal_
 
 ### License
 
