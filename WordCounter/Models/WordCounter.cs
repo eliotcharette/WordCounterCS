@@ -9,17 +9,17 @@ namespace WordCounterName
     private string _word;
     private int _times;
 
-    //private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
+    private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
 
     public WordCounterScore(string word, int times = 0)
     {
       _word = word;
-      _times = times
+      _times = times;
     }
     public string GetWord()
     {
       _word = _word.ToLower();
-      return = _word;
+      return _word;
     }
     // public string GetTimes()
     // {
