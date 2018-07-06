@@ -5,10 +5,16 @@ namespace WordCounterName
 {
   public class WordCounterScore
   {
+    private string _text;
+    private string _word;
+    private int _times;
 
-    public WordCounterScore()
+    private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
+
+    public WordCounterScore(string word, int times)
     {
-
+      _word = word;
+      _times = times
     }
     public void FindWord()
     {
@@ -31,14 +37,6 @@ namespace WordCounterName
         numberOfTimes++;
       }
       Console.WriteLine("The word you entered occurs " + numberOfTimes + " times.");
-    }
-  }
-  public class Program
-  {
-    public static void Main()
-    {
-      WordCounterScore newWord = new WordCounterScore();
-      newWord.FindWord();
     }
   }
 }
