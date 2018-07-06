@@ -10,7 +10,7 @@ namespace WordCounterName
     private string _word;
     private int _times;
     private string[] _separators = {",", ".", "!", "?", ";", ":", " "};
-    private string[] _words;
+    private string[] _wordArray;
 
     private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
 
@@ -31,18 +31,18 @@ namespace WordCounterName
     }
     public string[] GetWords()
     {
-      _words = _text.Split(_separators, StringSplitOptions.RemoveEmptyEntries);
-      return _words;
+      _wordArray = _text.Split(_separators, StringSplitOptions.RemoveEmptyEntries);
+      return _wordArray;
     }
-    // public int GetTimes()
-    // {
-    //   foreach (string appearance in _text)
-    //   if(appearance == _text)
-    //   {
-    //     _times++;
-    //   }
-    //   return _times;
-    // }
+    public int GetTimes()
+    {
+      foreach ( string appearance in _wordArray)
+      if(appearance == _word)
+      {
+        _times++;
+      }
+      return _times;
+    }
     public static List<WordCounterScore> GetAll()
     {
       return _instances;
