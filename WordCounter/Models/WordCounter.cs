@@ -11,14 +11,18 @@ namespace WordCounterName
 
     private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
 
-    public WordCounterScore(string word, int times)
+    public WordCounterScore(string word, int times = 0)
     {
       _word = word;
       _times = times
     }
-
-    public string GetText()
+    public string GetWord()
     {
+      return = _word;
+    }
+    public string GetTimes()
+    {
+
       return _text;
     }
     public void FindWord()
