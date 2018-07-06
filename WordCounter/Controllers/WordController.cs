@@ -10,9 +10,12 @@ namespace WordCounterName.Controllers
   {
     return View();
   }
-  // [HttpPost("/word")]
-  // public ActionResult Create()
-  // WordCounterScore newWord = new WordCounterScore();
-  //   newWord.FindWord();
+  [HttpPost("/word")]
+  public ActionResult Create(string word, int times)
+  {
+    WordCounterScore newWordCounterScore = new WordCounterScore(word, times);
+    newWordCounterScore.Save();
+    return View("word", WordCounterScore.GetAll());
+  }
 }
 }
