@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace WordCounterName
 {
@@ -8,6 +9,8 @@ namespace WordCounterName
     private string _text;
     private string _word;
     private int _times;
+    private string[] _separators = {",", ".", "!", "?", ";", ":", " "};
+    private string[] _words;
 
     private static List<WordCounterScore> _instances = new List<WordCounterScore> {};
 
@@ -26,18 +29,20 @@ namespace WordCounterName
       _text = _text.ToLower();
       return _text;
     }
-    public string GetTimes()
+    public string[] GetWords()
     {
-      string[] separators = {",", ".", "!", "?", ";", ":", " "};
-      string[] words = _text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-
-      foreach (string appearance in words)
-      if(appearance == _word)
-      {
-        _times++;
-      }
-      return _times;
+      _words = _text.Split(_separators, StringSplitOptions.RemoveEmptyEntries);
+      return _words;
     }
+    // public int GetTimes()
+    // {
+    //   foreach (string appearance in _text)
+    //   if(appearance == _text)
+    //   {
+    //     _times++;
+    //   }
+    //   return _times;
+    // }
     public static List<WordCounterScore> GetAll()
     {
       return _instances;
