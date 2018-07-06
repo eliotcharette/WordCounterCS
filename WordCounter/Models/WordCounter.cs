@@ -5,7 +5,7 @@ namespace WordCounterName
 {
   public class WordCounterScore
   {
-    //private string _text;
+    private string _text;
     private string _word;
     private int _times;
 
@@ -21,11 +21,23 @@ namespace WordCounterName
       _word = _word.ToLower();
       return _word;
     }
-    // public string GetTimes()
-    // {
-    //
-    //   return _text;
-    // }
+    public string GetText()
+    {
+      _text = _text.ToLower();
+      return _text;
+    }
+    public string GetTimes()
+    {
+      string[] separators = {",", ".", "!", "?", ";", ":", " "};
+      string[] words = _text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+      foreach (string appearance in words)
+      if(appearance == _word)
+      {
+        _times++;
+      }
+      return _times;
+    }
     public static List<WordCounterScore> GetAll()
     {
       return _instances;
@@ -34,6 +46,7 @@ namespace WordCounterName
     {
       _instances.Add(this);
     }
+
     // public void FindWord()
     // {
     //   int numberOfTimes = 0;
@@ -56,5 +69,6 @@ namespace WordCounterName
     //   }
     //   Console.WriteLine("The word you entered occurs " + numberOfTimes + " times.");
     // }
+
   }
 }
