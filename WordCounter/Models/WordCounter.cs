@@ -16,6 +16,11 @@ namespace WordCounterName
       _word = word;
       _times = times
     }
+
+    public string GetText()
+    {
+      return _text;
+    }
     public void FindWord()
     {
       int numberOfTimes = 0;
