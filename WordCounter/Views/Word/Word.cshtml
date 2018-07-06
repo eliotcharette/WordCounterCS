@@ -1,0 +1,6 @@
+<h1>Your word and how many times it was found:</h1>
+<ul>
+  @foreach (var word in @Model)
+  {<li>@word.GetWord()</li>}
+</ul>
+<p><a href="/input">Check another word</a></p>
