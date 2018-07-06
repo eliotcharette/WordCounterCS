@@ -11,9 +11,9 @@ namespace WordCounterName.Controllers
     return View();
   }
   [HttpPost("/word")]
-  public ActionResult Create(string word, int times)
+  public ActionResult Create(string word, string text, int times)
   {
-    WordCounterScore newWordCounterScore = new WordCounterScore(word, times);
+    WordCounterScore newWordCounterScore = new WordCounterScore(word, text, times);
     newWordCounterScore.Save();
     return View("word", WordCounterScore.GetAll());
   }

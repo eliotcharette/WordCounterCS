@@ -9,13 +9,23 @@ namespace WordCounterName.Tests
   public class WordCounterTest
   {
     [TestMethod]
-    public void WordCounterScore_FindWordOnce_Equal()
+    public void GetWords_SeeOutPut()
     {
-      WordCounterScore newWord = new WordCounterScore();
-      int expectedResult = 1;
-      string test = "hello";
-      Assert.AreEqual(expectedResult, newWord.FindWord(test));
+      string intput = "HELlo";
+      input.Getword();
+      string textInput = "Hello my name is HELlo df!!";
+      textInput.GetText();
+      
+      Assert.AreEqual(_text, test);
     }
+    // [TestMethod]
+    // public void WordCounterScore_FindWordOnce_Equal()
+    // {
+    //   WordCounterScore newWord = new WordCounterScore();
+    //   int expectedResult = 1;
+    //   string test = "hello";
+    //   Assert.AreEqual(expectedResult, newWord.FindWord(test));
+    // }
     // [TestMethod]
     // public void Matching_ReturnInput_String()
     // {

@@ -1,6 +1,8 @@
+<div class="container">
 <h1>Your word and how many times it was found:</h1>
 <ul>
   @foreach (var word in @Model)
-  {<li>@word.GetWord()</li>}
+  {<li>Your word: "@word.GetWord()" was found @word.GetTimes() times.</li>}
 </ul>
 <p><a href="/input">Check another word</a></p>
+</div>
